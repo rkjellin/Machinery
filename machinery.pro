@@ -44,3 +44,6 @@ QTC_PLUGIN_RECOMMENDS += \
 
 include($$QTCREATOR_SOURCES/src/qtcreatorplugin.pri)
 
+OTHER_FILES += \
+    Rust.mimetypes.xml
+

@@ -7,6 +7,7 @@
 #include <coreplugin/actionmanager/command.h>
 #include <coreplugin/actionmanager/actioncontainer.h>
 #include <coreplugin/coreconstants.h>
+#include <coreplugin/mimedatabase.h>
 
 #include <QAction>
 #include <QMessageBox>
@@ -37,6 +38,10 @@ bool MachineryPlugin::initialize(const QStringList &arguments,
 
   Q_UNUSED(arguments)
   Q_UNUSED(errorString)
+
+  if (!Core::MimeDatabase::addMimeTypes(tr("Rust.mimetypes.xml"), errorString)) {
+      return false;
+  }
 
   QAction *action = new QAction(tr("Machinery action"), this);
   Core::Command *cmd = Core::ActionManager::registerAction(
