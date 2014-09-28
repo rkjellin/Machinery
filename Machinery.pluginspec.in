@@ -1,0 +1,9 @@
+<plugin name=\"Machinery\" version=\"0.0.1\" compatVersion=\"0.0.1\">
+    <vendor>RickardKjellin</vendor>
+    <copyright>(C) Rickard Kjellin</copyright>
+    <license>Apache licence</license>
+    <description></description>
+    <url>http://www.mycompany.com</url>
+    $$dependencyList
+</plugin>
+
